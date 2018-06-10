@@ -1,0 +1,18 @@
+<p *ngFor = "let error of errors">{{error}}</p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>UPC</th>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Release Date</th>
+  </tr>
+  <tr *ngFor = "let product of products">
+    <td>{{product.ProductId}}</td>
+    <td>{{product.UPC}}</td>
+    <td><a [routerLink] = "['../sales', product.ProductId]">{{product.Title}}</a></td>
+    <td>{{product.ArtistName}}</td>
+    <td>{{product.RelDate | date: 'mediumDate'}}</td>
+    <td><button (click) = 'deleteProduct(product.ProductId)'>Delete</button></td>
+  </tr>
+</table>

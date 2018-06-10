@@ -1,0 +1,15 @@
+<p *ngFor = "let error of errors">{{error}}</p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Quantity</th>
+    <th>Revenue</th>
+    <th>Unit Price</th>
+  </tr>
+  <tr *ngIf = "sale">
+    <td>{{sale.ProductId}}</td>
+    <td>{{sale.SaleQty}}</td>
+    <td>{{sale.SalesRev}}</td>
+    <td>{{sale.UnitPrice}}</td>
+  </tr>
+</table>

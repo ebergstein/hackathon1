@@ -1,0 +1,12 @@
+<form (submit) = "createProduct(formData)" #formData = "ngForm">
+  <label>ID: <input type = "text" name = "ProductId" ngModel></label>
+  <label>UPC: <input type = "text" name = "UPC" ngModel></label>
+  <label>Title: <input type = "text" name = "Title" ngModel></label>
+  <label>Artist: <input type = "text" name = "ArtistName" ngModel></label>
+  <label>Release Date: <input type = "date" name = "RelDate" ngModel></label>
+  <label>Quantity: <input type = "number" name = "SaleQty" ngModel></label>
+  <label>Revenue: <input type = "text" name = "SalesRev" ngModel></label>
+  <label>Unit Price: <input type = "text" name = "UnitPrice" ngModel></label>
+  <input type = "submit" value = "Submit">
+</form>
+<p *ngFor = "let error of errors">{{error}}</p>
